@@ -34,12 +34,14 @@
         100% { background-position: 0% 50%; }
     }
 
-    .loader {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -93,6 +95,8 @@
         max-width: 600px;
         margin: 0 auto;
         text-align: center;
+        z-index: 1;
+        position: relative;
     }
 
     .content h1 {
@@ -139,8 +143,10 @@
 </head>
 <body>
 
-<div class="loader" id="loader">
-    <img src="loader.png" alt="Loading...">
+<div class="overlay" id="overlay">
+    <div class="loader">
+        <img src="loader.png" alt="Loading...">
+    </div>
 </div>
 
 <section class="content">
@@ -170,7 +176,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const loader = document.getElementById('loader');
+        const overlay = document.getElementById('overlay');
         const phoneFrame = document.getElementById('phone-frame');
         const videoContainer = document.getElementById('video-container');
         const video = videoContainer.querySelector('video');
@@ -183,7 +189,7 @@
 
             // Загружаем видео после PNG
             video.addEventListener('canplay', () => {
-                loader.style.display = 'none';
+                overlay.style.display = 'none';
                 videoContainer.style.display = 'block';
             });
             video.load();
