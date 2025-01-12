@@ -147,17 +147,19 @@
     <h1>ЛЕГКО ЗМІНЮЙ <br>ОДЯГ НА ФОТО</h1>
 </section>
 
-
-
 <section class="container">
-    <!-- Зарезервоване місце під телефон -->
-    <div style="position: relative; width: 100%; height: 0; padding-top: 140%; max-width: 350px; margin: 0 auto;">
-        <img src="3.png" alt="Phone Frame" class="phone-frame" id="phone-frame" loading="lazy" style="position: absolute; top: 0; left: 0; width: 100%; height: auto;">
+    <img src="3.png" alt="Phone Frame" class="phone-frame" id="phone-frame" loading="lazy">
+    <div class="video-container" id="video-container">
+        <video preload="none" autoplay muted loop playsinline>
+            <source src="https://sergeymfo.github.io/lookcom/your-video.MP4" type="video/mp4">
+            <source src="https://sergeymfo.github.io/lookcom/your-video.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
     </div>
 </section>
 
-<section class="content" style="min-height: 200px;">
-    <a href="https://t.me/LookEVA_bot?start=6782f4c4270e6f49dd0aa33c" class="button" id="emoji-button">
+<section class="content">
+    <a href="https://t.me/LookEVA_bot?start=6782f4c4270e6f49dd0aa33c" class="button">
         Перейти в Telegram bot
     </a>
     <p>Телеграм-бот, який легко видаляє все зайве.</p>
@@ -165,7 +167,6 @@
     Обережно: 😍 Результат вражає...
     <p class="small-text">Приєднуйся до нашого бота — понад 2 мільйони користувачів уже насолоджуються ним! 🎉</p>
 </section>
-
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
