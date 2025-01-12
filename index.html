@@ -10,133 +10,132 @@
 
   gtag('config', 'G-QZPGJ562R9');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Bot Promo</title>
-    
-    <style>
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow-y: auto;
-            background: linear-gradient(-45deg, #0d0d0d, #1c1c3b, #232323, #0d0d0d);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            color: white;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram Bot Promo</title>
 
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+<style>
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        overflow-y: auto;
+        background: linear-gradient(-45deg, #0d0d0d, #1c1c3b, #232323, #0d0d0d);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        color: white;
+        text-align: center;
+    }
 
-        .container {
-            position: relative;
-            width: 100%;
-            max-width: 350px;
-            margin: 20px auto;
-            text-align: center;
-        }
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
 
-        .phone-frame {
-            position: relative;
-            z-index: 2;
-            width: 70%;
-            display: block;
-            margin: 0 auto;
-        }
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        .video-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: calc(63% - 5px);
-            z-index: 1;
-            display: none; /* Скрыто до загрузки видео */
-        }
+    .loader img {
+        width: 80px;
+        height: 80px;
+        animation: spin 1.5s linear infinite;
+    }
 
-        .video-container video {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
 
-        .loader {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .container {
+        position: relative;
+        width: 100%;
+        max-width: 350px;
+        margin: 20px auto;
+        text-align: center;
+    }
 
-        .loader img {
-            width: 80px;
-            height: 80px;
-            animation: spin 1.5s linear infinite;
-        }
+    .phone-frame {
+        position: relative;
+        z-index: 2;
+        width: 70%;
+        display: none; /* Скрыто до загрузки */
+        margin: 0 auto;
+    }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+    .video-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(63% - 5px);
+        z-index: 1;
+        display: none; /* Скрыто до загрузки */
+    }
 
-        .content {
-            padding: 10px;
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    .video-container video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 
-        .content h1 {
-            font-size: 45px;
-            margin-bottom: 10px;
-            color: yellow;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
-            line-height: 1.2;
-            width: calc(70% + 30%);
-            margin: 10px auto;
-        }
+    .content {
+        padding: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
 
-        .button {
-            display: inline-block;
-            background: #FFD700;
-            color: black;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 20px auto;
-            text-align: center;
-            max-width: 250px;
-            cursor: pointer;
-            animation: pulse 2s infinite;
-            position: relative;
-            overflow: visible;
-        }
+    .content h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+        color: yellow;
+        text-transform: uppercase;
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700;
+        line-height: 1.2;
+        width: calc(70% + 30%);
+        margin: 10px auto;
+    }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 10px #FFD700; }
-            50% { transform: scale(1.1); box-shadow: 0 0 20px #FFD700; }
-        }
+    .button {
+        display: inline-block;
+        background: #FFD700;
+        color: black;
+        padding: 15px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 20px auto;
+        text-align: center;
+        max-width: 250px;
+        cursor: pointer;
+        animation: pulse 2s infinite;
+        position: relative;
+        overflow: visible;
+    }
 
-        .small-text {
-            font-size: 60%;
-            font-weight: normal;
-            margin-top: 13px;
-            color: white;
-        }
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); box-shadow: 0 0 10px #FFD700; }
+        50% { transform: scale(1.1); box-shadow: 0 0 20px #FFD700; }
+    }
 
-    </style>
+    .small-text {
+        font-size: 60%;
+        font-weight: normal;
+        margin-top: 13px;
+        color: white;
+    }
+</style>
 </head>
 <body>
 
@@ -149,18 +148,18 @@
 </section>
 
 <section class="container">
+    <img src="3.png" alt="Phone Frame" class="phone-frame" id="phone-frame" loading="lazy">
     <div class="video-container" id="video-container">
-        <video autoplay muted loop playsinline oncanplay="hideLoader()">
+        <video preload="none" autoplay muted loop playsinline>
             <source src="https://sergeymfo.github.io/lookcom/your-video.MP4" type="video/mp4">
             <source src="https://sergeymfo.github.io/lookcom/your-video.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>
     </div>
-    <img src="3.png" alt="Phone Frame" class="phone-frame">
 </section>
 
 <section class="content">
-    <a href="https://t.me/LookEVA_bot?start=6782f4c4270e6f49dd0aa33c" class="button" id="emoji-button">
+    <a href="https://t.me/LookEVA_bot?start=6782f4c4270e6f49dd0aa33c" class="button">
         Перейти в Telegram bot
     </a>
     <p>Телеграм-бот, який легко видаляє все зайве.</p>
@@ -170,13 +169,26 @@
 </section>
 
 <script>
-    const loader = document.getElementById('loader');
-    const videoContainer = document.getElementById('video-container');
+    document.addEventListener('DOMContentLoaded', () => {
+        const loader = document.getElementById('loader');
+        const phoneFrame = document.getElementById('phone-frame');
+        const videoContainer = document.getElementById('video-container');
+        const video = videoContainer.querySelector('video');
 
-    function hideLoader() {
-        loader.style.display = 'none';
-        videoContainer.style.display = 'block';
-    }
+        // Показываем PNG телефона после загрузки
+        const img = new Image();
+        img.src = phoneFrame.src;
+        img.onload = () => {
+            phoneFrame.style.display = 'block';
+
+            // Загружаем видео после PNG
+            video.addEventListener('canplay', () => {
+                loader.style.display = 'none';
+                videoContainer.style.display = 'block';
+            });
+            video.load();
+        };
+    });
 </script>
 
 </body>
